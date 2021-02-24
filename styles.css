@@ -1,0 +1,233 @@
+/* All CSS written by Jeffrey B. Madden 2021. */
+
+body {
+   margin:0px;
+   border:0px;
+   padding:50px;
+   color:Silver;
+   background-color:#303030;
+   background-image:url('https://i.imgur.com/Dqq0hsN.jpg');
+   background-repeat:repeat;
+}
+
+#stereo {
+   display:block;
+   position:relative;
+   width:750px;
+   height:233px;
+   margin:0px auto 0px auto;
+   border:0px;
+   padding:0px;
+   background-image:url('https://i.imgur.com/GzUQW4u.png');
+   background-repeat:no-repeat;
+}
+
+/*Buttons*/
+
+#stereo div {
+   margin:0px;
+   border:0px;
+   padding:0px;
+   background-repeat:no-repeat;
+}
+
+.treble_bass,
+.eject,
+.rw,
+.ff,
+.extra,
+.volume,
+.play,
+.tuner,
+.header,
+.discselect,
+.disc,
+.hide {
+   display:block;
+   position:absolute;
+}
+
+#stereo div.flex { display:flex; }
+
+.volume, .disc {
+   background-position:top;
+}
+
+.treble_bass {
+   width:92px;
+   height:56px;
+   left:58px;
+   top:35px;
+   flex-direction:row;
+   flex-wrap: wrap;
+}
+
+.treble_bass div {
+   width:92px;
+   height:22px;
+   background-image:url('https://i.imgur.com/cRhVW8S.png');
+   background-repeat:no-repeat;
+   transition:background-position .5s linear 0s;
+   -webkit-transition:background-position .5s linear 0s;
+   -moz-transition:background-position .5s linear 0s;
+}
+
+.treble_bass div:first-child { align-self:flex-start; background-position:10% 0px; }
+.treble_bass div:last-child { align-self:flex-end; background-position:70% 0px; }
+.treble_bass div:first-child:hover { background-position:92% 0px; }
+.treble_bass div:last-child:hover { background-position:8% 0px; }
+
+/*Button Positioning*/
+
+.eject,
+.rw,
+.ff,
+.extra,
+.play,
+.tuner,
+.hide,
+.showerbtn {
+   background-image:url('https://i.imgur.com/5vzSwIJ.png');
+}
+
+.eject {
+   top:32px;
+   left:185px;
+   width:56px;
+   height:63px;
+   background-position:0px 0px;
+   cursor:pointer;
+}
+
+.rw {
+   top:32px;
+   left:499px;
+   width:56px;
+   height:63px;
+   background-position:-62px 0px;
+   cursor:pointer;
+}
+
+.ff {
+   top:32px;
+   left:549px;
+   width:56px;
+   height:63px;
+   background-position:-124px 0px;
+   cursor:pointer;
+}
+
+.extra {
+   top:32px;
+   left:605px;
+   width:100px;
+   height:52px;
+   background-position:-186px 0px;
+   cursor:pointer;
+}
+
+.play {
+   top:99px;
+   left:187px;
+   width:52px;
+   height:97px;
+   background-position:0px -124px;
+   cursor:pointer;
+}
+
+.tuner {
+   top:99px;
+   right:35px;
+   width:77px;
+   height:97px;
+   background-position:-124px -124px;
+   cursor:pointer;
+}
+
+.volume {
+   top:120px;
+   left:74px;
+   width:64px;
+   height:64px;
+   cursor:pointer;
+}
+
+.volume div:first-child {
+   width:64px;
+   height:64px;
+   background-image:url('https://i.imgur.com/n0aejav.png');
+   transform:rotate(-135deg);
+   -webkit-transform:rotate(-135deg);
+   -moz-transform:rotate(-135deg);
+   -o-transform:rotate(-135deg);
+   transition:transform .75s ease-in 0s;
+   -webkit-transition:-webkit-transform .75s ease-in 0s;
+   -moz-transition:-moz-transform .75s ease-in 0s;
+}
+
+.volume div:first-child:hover {
+   transform:rotate(0deg);
+   -webkit-transform:rotate(0deg);
+   -moz-transform:rotate(0deg);
+   -o-transform:rotate(0deg);
+   transition:transform 1.5s ease-out 0s;
+   -webkit-transition:-webkit-transform 1.5s ease-out 0s;
+   -moz-transition:-moz-transform 1.5s ease-out 0s;
+}
+
+.header {
+   width:98px;
+   height:32px;
+   line-height:24px;
+   top:126px;
+   left:362px;
+   text-align:center;
+   font-family:lcd;
+   font-size:32px;
+   color:#c2f200;
+   background-color:rgba(255, 0, 255, 0.5);
+   text-shadow:0px 0px 15px #c2f200, 0px 0px 6px #c2f200;
+   opacity:0.9;
+}
+
+.discselect {
+   width:70px;
+   height:54px;
+   top:116px;
+   left:294px;
+   background-image:url('https://i.imgur.com/v3bvn9S.png');
+}
+
+.disc {
+   top:99px;
+   left:502px;
+   width:138px;
+   height:92px;
+   flex-direction:row;
+   justify-content:center;
+   flex-wrap: wrap;
+}
+
+.disc div {
+   width:44px;
+   height:44px;
+   cursor:pointer;
+}
+
+a.hide, a.show  {
+   top:4px;
+   right:12px;
+   width:28px;
+   height:31px;
+   background-position:0px -248px;
+   cursor:pointer;
+}
+
+a.hide:active, a.show:active { background-position:-31px -248px; }
+
+.eject:active { background-position:0px -62px; }
+.rw:active { background-position:-62px -62px; }
+.ff:active { background-position:-124px -62px; }
+.extra:active { background-position:-186px -62px; }
+.play:active { background-position:-62px -124px; }
+.tuner:active { background-position:-217px -124px; }
