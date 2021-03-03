@@ -1,8 +1,8 @@
 --- Disclaimer ---
-LCD Media Player Version 1.1 written and created by Jeffrey B. Madden 03-03-2021.
+LCD Media Player Version 1.2 written and created by Jeffrey B. Madden 03-03-2021.
 All rights reserved. Any use of LCD Media Player Version 1.1 can only be granted with permission of the owner Jeffrey B. Madden.
 
---- About LCD Media Player Version 1.1 ---
+--- About LCD Media Player Version 1.2 ---
 LCD Media Player is a graphical replica of a real 8292MM, inspired from an single image. LCD Media Player is created to participate in the Codepen Challenge of the week: Skipping. This media player allows for six playlists, each with infinite tracks.
 
 --- Standalone ---
