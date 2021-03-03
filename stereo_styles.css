@@ -1,0 +1,376 @@
+/* All CSS written by Jeffrey B. Madden 2021. */
+
+@font-face {
+   font-family:lcd;
+   src:url('jeff_madden_font.otf');
+}
+
+body {
+   margin:0px;
+   border:0px;
+   padding:0px;
+   color:Silver;
+   background-color:#303030;
+   background-image:url('images/bg.jpg');
+   background-repeat:repeat;
+}
+
+:root {
+   --digital-green:#c2f200;
+}
+
+#stereo {
+   display:block;
+   position:relative;
+   width:750px;
+   height:233px;
+   margin:0px auto 50px auto;
+   border:0px;
+   padding:0px;
+   background-image:url('images/stereo.png');
+   background-repeat:no-repeat;
+   transition:margin-top 0.3s linear;
+   -webkit-transition:margin-top 0.3s linear;
+   -moz-transition:margin-top 0.3s linear;
+}
+
+#stereo.show { margin-top:50px; }
+#stereo.hide { margin-top:-233px; }
+
+/*Buttons*/
+
+#stereo div {
+   margin:0px;
+   border:0px;
+   padding:0px;
+   background-repeat:no-repeat;
+}
+
+#stereo .treble_bass,
+#stereo .eject,
+#stereo .previous,
+#stereo .next,
+#stereo .manual,
+#stereo .volume,
+#stereo .play,
+#stereo .tuner,
+#stereo .header,
+#stereo .discselect,
+#stereo .discs,
+#stereo .faceplate,
+#equalizer {
+   display:block;
+   position:absolute;
+}
+
+#stereo div.flex { display:flex; }
+
+#stereo .volume, #stereo .discs {
+   background-position:top;
+}
+
+#stereo .treble_bass {
+   width:92px;
+   height:56px;
+   left:58px;
+   top:35px;
+   flex-direction:row;
+   flex-wrap: wrap;
+}
+
+#stereo .treble_bass div {
+   width:92px;
+   height:22px;
+   background-image:url('images/button_slide.png');
+   background-repeat:no-repeat;
+   transition:background-position .5s linear 0s;
+   -webkit-transition:background-position .5s linear 0s;
+   -moz-transition:background-position .5s linear 0s;
+}
+
+#stereo .treble_bass div:first-child { align-self:flex-start; background-position:10% 0px; }
+#stereo .treble_bass div:last-child { align-self:flex-end; background-position:70% 0px; }
+#stereo .treble_bass div:first-child:hover { background-position:92% 0px; }
+#stereo .treble_bass div:last-child:hover { background-position:8% 0px; }
+
+/*Button Positioning*/
+
+#stereo .eject,
+#stereo .previous,
+#stereo .next,
+#stereo .manual,
+#stereo .play,
+#stereo .tuner,
+#stereo .faceplate,
+#stereo .showerbtn {
+   background-image:url('images/buttons.png');
+}
+
+#stereo .eject {
+   top:32px;
+   left:185px;
+   width:56px;
+   height:63px;
+   background-position:0px 0px;
+   cursor:pointer;
+}
+
+#stereo .previous {
+   top:32px;
+   left:499px;
+   width:56px;
+   height:63px;
+   background-position:-62px 0px;
+   cursor:pointer;
+}
+
+#stereo .next {
+   top:32px;
+   left:549px;
+   width:56px;
+   height:63px;
+   background-position:-124px 0px;
+   cursor:pointer;
+}
+
+#stereo .manual {
+   top:32px;
+   left:605px;
+   width:100px;
+   height:52px;
+   background-position:-186px 0px;
+   cursor:pointer;
+}
+
+#stereo .play {
+   top:99px;
+   left:187px;
+   width:52px;
+   height:97px;
+   background-position:0px -124px;
+   cursor:pointer;
+}
+
+#stereo .tuner {
+   top:99px;
+   right:35px;
+   width:77px;
+   height:97px;
+   background-position:-124px -124px;
+   cursor:pointer;
+}
+
+#stereo .volume.rotate,
+#stereo .volume.def {
+   top:120px;
+   left:74px;
+   width:64px;
+   height:64px;
+   margin:0px;
+   border:0px;
+   padding:0px;
+   cursor:pointer;
+}
+
+#stereo .volume div:first-child {
+   width:64px;
+   height:64px;
+   background-image:url('images/volume_notch.png');
+   background-position:center center;
+   transform:rotate(0deg);
+   -webkit-transform:rotate(0deg);
+   -moz-transform:rotate(0deg);
+   transform-origin:50% 50%;
+   -webkit-transform-origin:50% 50%;
+   -moz-transform-origin:50% 50%;
+}
+
+#stereo .volume.rotate,
+#stereo .volume.rotate div:first-child {
+   width:64px;
+   height:240px;
+}
+
+#stereo .volume.rotate {
+   margin-top:-88px;
+}
+
+#stereo .header {
+   width:98px;
+   height:30px;
+   line-height:30px;
+   top:127px;
+   left:364px;
+   cursor:pointer;
+   overflow:visible;
+}
+
+#stereo .header span {
+   display:inline-block;
+   width:100%;
+   height:100%;
+   margin:0px;
+   border:0px;
+   padding:0px;
+   text-align:left;
+   font-family:lcd;
+   font-size:30px;
+   letter-spacing:0px;
+   word-spacing:0px;
+   color:var(--digital-green);
+   text-shadow:0px 0px 15px var(--digital-green), 0px 0px 6px var(--digital-green);
+   white-space:nowrap;
+   overflow:visible;
+}
+
+#stereo .discselect {
+   width:70px;
+   height:54px;
+   top:116px;
+   left:294px;
+   background-image:url('images/playlist_select.png');
+}
+
+#stereo .discs {
+   top:99px;
+   left:502px;
+   width:138px;
+   height:92px;
+   flex-direction:row;
+   justify-content:center;
+   flex-wrap: wrap;
+}
+
+#stereo .discs div {
+   width:44px;
+   height:44px;
+   cursor:pointer;
+}
+
+#stereo .faceplate  {
+   right:12px;
+   width:28px;
+   height:31px;
+   background-position:0px -248px;
+   cursor:pointer;
+}
+
+#stereo.hide .faceplate  { top:237px; }
+#stereo.show .faceplate  { top:4px; }
+
+#stereo.show .faceplate:active { background-position:-31px -248px; }
+
+#stereo .eject:active { background-position:0px -62px; }
+#stereo .previous:active { background-position:-62px -62px; }
+#stereo .next:active { background-position:-124px -62px; }
+#stereo .manual:active { background-position:-186px -62px; }
+#stereo .play:active { background-position:-62px -124px; }
+#stereo .tuner:active { background-position:-217px -124px; }
+
+/* Equalizer Styles */
+
+#equalizer {
+   display:flex;
+   position:absolute;
+   left:246px;   
+   top:108px;
+   width:56px;
+   height:50px;
+   margin:0px;
+   border:0px;
+   padding:0px;
+   box-sizing:border-box;
+   flex-direction:row;
+   justify-content:center;
+   cursor:pointer;
+}
+
+#equalizer .freq_col {
+   display:flex;
+   position:relative;
+   min-width:1px;
+   margin:0px;
+   border:0px;
+   padding:0px;
+   flex-direction:column;
+   justify-content:flex-end;
+}
+
+#equalizer .freq_col div {
+   position:relative;
+   min-width:1px;
+   min-height:1px;
+   margin:0px;
+   border:0px;
+   padding:0px;
+   box-shadow:0px 0px 3px 1px rgba(200, 255, 0, 0.5);
+}
+
+/* Artist Links */
+
+.artist_links {
+   display:block;
+   width:726px;
+   margin:0px auto 50px auto;
+   border:0px;
+   padding:0px;
+   opacity:0.9;
+}
+
+.artist_links h2 {
+   display:block;
+   margin:0px;
+   border:1px solid transparent;
+   padding:20px;
+   color:var(--digital-green);
+   font-size:32px;
+   font-family:lcd;
+   font-weight:normal;
+   cursor:default;
+}
+
+.artist_links .wrap {
+   display:block;
+   height:210px;
+   margin:0px auto 0px auto;
+   border:1px solid var(--digital-green);
+   border-top-left-radius:16px;
+   border-bottom-left-radius:16px;
+   padding:20px;
+   box-sizing:border-box;
+   overflow-y:scroll;
+}
+
+.artist_links a {
+   display:block;
+   margin:0px;
+   border:0px;
+   padding:10px;
+   color:#a0a0a0;
+   font-size:22px;
+   font-family:lcd;
+   text-decoration:none;
+   background-color:transparent;
+}
+
+.artist_links a:hover {
+   color:var(--digital-green);
+   text-shadow:0px 0px 15px var(--digital-green), 0px 0px 6px var(--digital-green);
+}
+
+#deg {
+   display:block;
+   position:fixed;
+   left:20px;
+   top:20px;
+   width:40px;
+   height:20px;
+   line-height:20px;
+   margin:0px;
+   border:0px;
+   padding:0px;
+   color:White;
+   font-family:Arial;
+   font-size:18px;
+   text-align:right;
+}
