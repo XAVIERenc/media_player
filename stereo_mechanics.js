@@ -300,7 +300,6 @@ Stereo.prototype.resetScrollCounter = function( self ) {
    } ;
 
 Stereo.prototype.playTrack = function( self ) {
-console.log("playTrack") ;
    self.buttons.play.removeEventListener("mousedown" , self.playListener) ;
    self.buttons.play.addEventListener("mousedown" , self.pauseListener , false) ;
    self.audio.onended = function() { self.skipTrack(self , 1) ; } ;
