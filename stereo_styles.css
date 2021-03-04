@@ -57,8 +57,7 @@ body {
 #stereo .header,
 #stereo .discselect,
 #stereo .discs,
-#stereo .faceplate,
-#equalizer {
+#stereo .faceplate {
    display:block;
    position:absolute;
 }
