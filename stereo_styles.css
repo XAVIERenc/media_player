@@ -357,20 +357,3 @@ body {
    color:var(--digital-green);
    text-shadow:0px 0px 15px var(--digital-green), 0px 0px 6px var(--digital-green);
 }
-
-#deg {
-   display:block;
-   position:fixed;
-   left:20px;
-   top:20px;
-   width:40px;
-   height:20px;
-   line-height:20px;
-   margin:0px;
-   border:0px;
-   padding:0px;
-   color:White;
-   font-family:Arial;
-   font-size:18px;
-   text-align:right;
-}
