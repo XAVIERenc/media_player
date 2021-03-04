@@ -11,6 +11,9 @@ LCD Media Player is a graphical replica of a real 8292MM, inspired from an singl
 --- Standalone ---
 LCD Media Player is built as a standalone feature. One external javascript document, one script tag at the end of the body, one wrapper div for the stereo panel, and one stylesheet. All functions are constructed and loaded in one, self executing, anonymous function.
 
+--- Font ---
+"jeff_madden_font.otf" was created by Jeff Madden. jeff_madden_font is monospaced and perfect for this type of application. If you use my font, please credit me for it's creation. Thank you.
+
 --- Features ---
 
 --- Playlists ---
