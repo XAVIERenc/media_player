@@ -57,7 +57,8 @@ body {
 #stereo .header,
 #stereo .discselect,
 #stereo .discs,
-#stereo .faceplate {
+#stereo .faceplate,
+#equalizer {
    display:block;
    position:absolute;
 }
@@ -357,14 +358,14 @@ body {
    text-shadow:0px 0px 15px var(--digital-green), 0px 0px 6px var(--digital-green);
 }
 
-/* Creator Styles */
+/* Creator Section */
 
 #creator {
    display:flex;
    margin:0px;
    border:0px;
    padding:40px 0px 60px 0px;
-   background-color:rgba(0, 0, 0, 0.6);
+   background-color:transparent;
    flex-direction:row;
    justify-content:center;
    align-items:center;
@@ -375,7 +376,10 @@ body {
    margin:0px;
    border:0px;
    padding:12px;
-   font-size:26px;
+   color:#a0a0a0;
+   font-size:22px;
+   font-family:lcd;
+   text-decoration:none;
    cursor:default;
 }
 
@@ -389,7 +393,5 @@ body {
    background-color:transparent;
    background-image:url('https://i.imgur.com/7RIuYaV.png');
    background-repeat:no-repeat;
+   background-position:0px 0px;
 }
-
-#creator.green a { background-position:0px -40px; }
-#creator.purple a { background-position:0px 0px; }
